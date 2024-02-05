@@ -4,8 +4,6 @@ import requests
 
 
 class BaseClient:
-    BASE_URL = 'https://qa-scooter.praktikum-services.ru/api/v1'
-
     def extract_response(self, response):
         if 'application/json' in response.headers['Content-Type']:
             return response.json(), response.status_code
